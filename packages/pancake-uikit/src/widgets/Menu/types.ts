@@ -46,9 +46,12 @@ export interface PanelProps {
   langs: Language[];
   setLang: (lang: Language) => void;
   links: Array<MenuEntry>;
+  
 }
 
 export interface NavProps extends PanelProps {
   userMenu?: ReactElement;
   globalMenu?: ReactElement;
+  logo?: ReactElement;
+  logoWithText?: ReactElement;
 }

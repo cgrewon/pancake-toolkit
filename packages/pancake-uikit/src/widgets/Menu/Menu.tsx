@@ -70,6 +70,8 @@ const Menu: React.FC<NavProps> = ({
   cakePriceUsd,
   links,
   children,
+  logo,
+  logoWithText
 }) => {
   const { isMobile, isTablet } = useMatchBreakpoints();
   const isSmallerScreen = isMobile || isTablet;
@@ -113,6 +115,8 @@ const Menu: React.FC<NavProps> = ({
     <Wrapper>
       <StyledNav showMenu={showMenu}>
         <Logo
+          logo={logo}
+          logoWithText={logoWithText}
           isPushed={isPushed}
           togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
           isDark={isDark}
@@ -124,6 +128,7 @@ const Menu: React.FC<NavProps> = ({
       </StyledNav>
       <BodyWrapper>
         <Panel
+          logo={logo}
           isPushed={isPushed}
           isMobile={isSmallerScreen}
           showMenu={showMenu}
